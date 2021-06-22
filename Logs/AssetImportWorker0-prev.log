@@ -118,4 +118,7 @@ Received Import Request.
 Start importing Assets/Scenes/MAP.unity using Guid(1f85c890805dfb146b96452cb71e2725) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a11f7842bec30906debb0eca2ea315fe') in 0.011201 seconds
   Import took 0.013345 seconds .
 
+<<<<<<< HEAD
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
+=======
+>>>>>>> 14309cb4964afbf553098a703a84ca640e807b59
