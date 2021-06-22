@@ -1,11 +1,6 @@
-Base path: 'C:/Users/farha/Desktop/Viper's Stuff v2/GameDev Library/UnityHub/Unity/2020.3.11f1/Editor/Data', plugins path 'C:/Users/farha/Desktop/Viper's Stuff v2/GameDev Library/UnityHub/Unity/2020.3.11f1/Editor/Data/PlaybackEngines'
+Base path: 'C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
 
 Unhandled exception: Protocol error - failed to read magic number (error -2147483644, transferred 0/4)
 
-<<<<<<< HEAD
-=======
-Unhandled exception: Protocol error - failed to read magic number (error -2147483644, transferred 0/4)
-
->>>>>>> 14309cb4964afbf553098a703a84ca640e807b59
 Quitting shader compiler process
