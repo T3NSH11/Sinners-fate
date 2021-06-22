@@ -42,7 +42,7 @@ public class playerMovement : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            speed = 20f;
+            speed = 30f;
         }
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
@@ -51,13 +51,15 @@ public class playerMovement : MonoBehaviour
 
 
 
-        if (Input.GetKey(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.C))
         {
             controller.height = 0.5f;
+            speed = 5f;
         }
-        else
+        if (Input.GetKeyUp(KeyCode.C))
         {
             controller.height = 2.0f;
+            speed = 12f;
         }
        
        
