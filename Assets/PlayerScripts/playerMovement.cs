@@ -5,7 +5,7 @@ using UnityEngine;
 public class playerMovement : MonoBehaviour
 {
     public CharacterController controller;
-
+    
     public float speed = 12f;
     public float gravity = - 9.81f;
     public Transform groundCheck;
@@ -22,11 +22,6 @@ public class playerMovement : MonoBehaviour
     private void Start()
     {
         controller = gameObject.GetComponent<CharacterController>();
-
-       
-
-        
-        
     }
 
 
@@ -61,12 +56,6 @@ public class playerMovement : MonoBehaviour
             controller.height = 2.0f;
             speed = 12f;
         }
-       
-       
-
-
-
-
 
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
