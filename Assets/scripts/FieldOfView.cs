@@ -5,23 +5,47 @@ using UnityEngine;
 
 public class FieldOfView : MonoBehaviour
 {
-    public float radius;
+    public float RangeRadius;
     [Range(0,360)]
-    public float angle;
+    public float FOVAngle;
 
-    public GameObject playerRef;
+    public GameObject playerObj;
 
-    public LayerMask targetMask;
-    public LayerMask obstructionMask;
+    public LayerMask PlayerMask;
+    public LayerMask WallMask;
 
-    public bool canSeePlayer;
+    public bool PlayerDetected;
 
     private void Start()
     {
-        playerRef = GameObject.FindGameObjectWithTag("Player");
+        playerObj = GameObject.FindGameObjectWithTag("Player");
         StartCoroutine(FOVRoutine());
     }
 
+    private void FieldOfViewCheck()
+    {
+        Collider[] CollidersInRange = Physics.OverlapSphere(transform.position, RangeRadius, PlayerMask);
+
+        if (CollidersInRange.Length != 0)
+        {
+            Transform PlayerTransform = CollidersInRange[0].transform;
+            Vector3 directionToTarget = (PlayerTransform.position - transform.position).normalized;
+
+            if (Vector3.Angle(transform.forward, directionToTarget) < FOVAngle / 2)
+            {
+                float distanceToTarget = Vector3.Distance(transform.position, PlayerTransform.position);
+
+                if (!Physics.Raycast(transform.position, directionToTarget, distanceToTarget, WallMask))
+                    PlayerDetected = true;
+                else
+                    PlayerDetected = false;
+            }
+            else
+                PlayerDetected = false;
+        }
+        else if (PlayerDetected)
+            PlayerDetected = false;
+    }
     private IEnumerator FOVRoutine()
     {
         WaitForSeconds wait = new WaitForSeconds(0.2f);
@@ -31,30 +55,5 @@ public class FieldOfView : MonoBehaviour
             yield return wait;
             FieldOfViewCheck();
         }
-    }
-
-    private void FieldOfViewCheck()
-    {
-        Collider[] rangeChecks = Physics.OverlapSphere(transform.position, radius, targetMask);
-
-        if (rangeChecks.Length != 0)
-        {
-            Transform target = rangeChecks[0].transform;
-            Vector3 directionToTarget = (target.position - transform.position).normalized;
-
-            if (Vector3.Angle(transform.forward, directionToTarget) < angle / 2)
-            {
-                float distanceToTarget = Vector3.Distance(transform.position, target.position);
-
-                if (!Physics.Raycast(transform.position, directionToTarget, distanceToTarget, obstructionMask))
-                    canSeePlayer = true;
-                else
-                    canSeePlayer = false;
-            }
-            else
-                canSeePlayer = false;
-        }
-        else if (canSeePlayer)
-            canSeePlayer = false;
     }
 }

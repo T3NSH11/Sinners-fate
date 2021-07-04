@@ -347,16 +347,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09c29bfc5a1212f42ad714b11506be2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 6.99
-  angle: 60
-  playerRef: {fileID: 0}
-  targetMask:
+  RangeRadius: 7.25
+  FOVAngle: 41.98
+  playerObj: {fileID: 268699676}
+  PlayerMask:
     serializedVersion: 2
     m_Bits: 128
-  obstructionMask:
+  WallMask:
     serializedVersion: 2
     m_Bits: 8
-  canSeePlayer: 0
+  PlayerDetected: 0
 --- !u!136 &648380479
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -428,7 +428,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 648380477}
   m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
-  m_LocalPosition: {x: 25.64, y: 3.67, z: -47.47}
+  m_LocalPosition: {x: 25.65, y: 3.67, z: -48.11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
