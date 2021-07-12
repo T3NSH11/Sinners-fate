@@ -16,10 +16,17 @@ public class FieldOfView : MonoBehaviour
 
     public bool PlayerDetected;
 
+    public Vector3 directionToPlayer;
+    public Transform PlayerTransform;
+
     private void Start()
     {
         playerObj = GameObject.FindGameObjectWithTag("Player");
-        StartCoroutine(FOVRoutine());
+    }
+
+    private void Update()
+    {
+        FieldOfViewCheck();
     }
 
     private void FieldOfViewCheck()
@@ -28,14 +35,14 @@ public class FieldOfView : MonoBehaviour
 
         if (CollidersInRange.Length != 0)
         {
-            Transform PlayerTransform = CollidersInRange[0].transform;
-            Vector3 directionToTarget = (PlayerTransform.position - transform.position).normalized;
+            PlayerTransform = CollidersInRange[0].transform;
+            directionToPlayer = (PlayerTransform.position - transform.position).normalized;
 
-            if (Vector3.Angle(transform.forward, directionToTarget) < FOVAngle / 2)
+            if (Vector3.Angle(transform.forward, directionToPlayer) < FOVAngle / 2)
             {
                 float distanceToTarget = Vector3.Distance(transform.position, PlayerTransform.position);
 
-                if (!Physics.Raycast(transform.position, directionToTarget, distanceToTarget, WallMask))
+                if (!Physics.Raycast(transform.position, directionToPlayer, distanceToTarget, WallMask))
                     PlayerDetected = true;
                 else
                     PlayerDetected = false;
@@ -45,15 +52,5 @@ public class FieldOfView : MonoBehaviour
         }
         else if (PlayerDetected)
             PlayerDetected = false;
-    }
-    private IEnumerator FOVRoutine()
-    {
-        WaitForSeconds wait = new WaitForSeconds(0.2f);
-
-        while (true)
-        {
-            yield return wait;
-            FieldOfViewCheck();
-        }
     }
 }

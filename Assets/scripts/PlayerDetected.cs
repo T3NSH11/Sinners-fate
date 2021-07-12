@@ -6,13 +6,15 @@ public class PlayerDetected : MonoBehaviour
 {
     public Material DetectMat;
     Material originalmat;
+    private bool detected;
     void Start()
     {
         originalmat = gameObject.GetComponent<MeshRenderer>().material;
+        detected = gameObject.transform.parent.GetComponent<FieldOfView>().PlayerDetected;
     }
     void Update()
     {
-        if (gameObject.transform.parent.GetComponent<FieldOfView>().PlayerDetected)
+        if (detected)
         {
             gameObject.GetComponent<MeshRenderer>().material = DetectMat;
         }
