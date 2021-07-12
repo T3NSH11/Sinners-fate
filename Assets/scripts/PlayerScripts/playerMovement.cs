@@ -10,6 +10,7 @@ public class playerMovement : MonoBehaviour
     public float gravity = -9.81f;
     public Transform groundCheck;
     public float groundDistance = 0.4f;
+    public float jumpdist;
 
     public LayerMask groundMask;
     Vector3 velocity;
@@ -52,6 +53,10 @@ public class playerMovement : MonoBehaviour
         {
             controller.height = 2.0f;
             speed = 12f;
+        }
+        if(isGrounded && Input.GetKeyDown(KeyCode.Space))
+        {
+            velocity.y = jumpdist;
         }
 
 
