@@ -50,8 +50,8 @@ public class playerRaycast : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     isPickup = true;
-                pickUpobj = hit.collider.gameObject;
-                  Rigidbody rb =  hit.collider.GetComponent<Rigidbody>();
+                    pickUpobj = hit.collider.gameObject;
+                    Rigidbody rb =  hit.collider.GetComponent<Rigidbody>();
                     Destroy(rb);
 
                 }
