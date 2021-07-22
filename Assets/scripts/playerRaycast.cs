@@ -56,6 +56,17 @@ public class playerRaycast : MonoBehaviour
 
                 }
             }
+            else if(hit.collider.tag == "powerCore")
+             {
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    isPickup = true;
+                    pickUpobj = hit.collider.gameObject;
+                    Rigidbody rb = hit.collider.GetComponent<Rigidbody>();
+                    Destroy(rb);
+
+                }
+             }
         }
        
     }
