@@ -10,11 +10,8 @@ public class playerRaycast : MonoBehaviour
     private bool isPickup;
     private GameObject pickUpobj;
     public Transform pickupPlacholder;
-    // Update is called once per frame
     void Update()
     {
-        
-
         // to stop any further action that has to do with raycasting while an object is picked up
         if (isPickup == true && pickUpobj)
         {
@@ -29,7 +26,9 @@ public class playerRaycast : MonoBehaviour
             }
             return;
         }
+
         RaycastHit hit;
+
         if (Physics.Raycast(cam.transform.position,cam.transform.forward,out hit,Raylength))
         {
             if (hit.collider.tag == "interactible")
@@ -45,6 +44,7 @@ public class playerRaycast : MonoBehaviour
                 // deactivate pop up
                 popUp.SetActive(false);
             }
+
             if(hit.collider.tag == "pickUp")
             {
                 if (Input.GetKeyDown(KeyCode.E))
@@ -57,7 +57,7 @@ public class playerRaycast : MonoBehaviour
                 }
             }
             else if(hit.collider.tag == "powerCore")
-             {
+            {
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     isPickup = true;
@@ -66,7 +66,7 @@ public class playerRaycast : MonoBehaviour
                     Destroy(rb);
 
                 }
-             }
+            }
         }
        
     }

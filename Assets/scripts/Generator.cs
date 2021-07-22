@@ -5,13 +5,12 @@ using UnityEngine;
 public class Generator : MonoBehaviour
 {
     public int NumberOfpowerCells;
-    // Start is called before the first frame update
+
     void Start()
     {
         NumberOfpowerCells = 0;
     }
 
-    // Update is called once per frame
     void Update()
     {
         collectedPowercells();

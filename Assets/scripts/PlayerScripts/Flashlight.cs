@@ -6,14 +6,12 @@ public class Flashlight : MonoBehaviour
 {
    public bool flashlightOn;
     public GameObject flashLight;
-    // Start is called before the first frame update
+
     void Start()
     {
         flashLight.SetActive(false);
-        
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.F))
@@ -42,8 +40,4 @@ public class Flashlight : MonoBehaviour
     {
         flashLight.SetActive(false);
     }
-
-
-
-
 }

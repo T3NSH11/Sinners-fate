@@ -5,7 +5,6 @@ using UnityEngine;
 public class Follow_Waypoints : MonoBehaviour
 {
     public AI_Waypoint_System current_SetPath;
-
     public int currentPath_NodeID = 0;
     public float speed;
     public float waypointDist = 1.0f;       //set as private once the desired value has been set.
@@ -21,7 +20,6 @@ public class Follow_Waypoints : MonoBehaviour
         prevNode_Pos = transform.position;
     }
 
-    // Update is called once per frame
     void Update()
     {
         float node_Distance = Vector3.Distance(current_SetPath.pathNodes[currentPath_NodeID].position, transform.position);

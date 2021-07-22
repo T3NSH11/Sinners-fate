@@ -5,15 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class mainMenu : MonoBehaviour
 {
-    
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-
     public void quitGame()
     {
         Debug.Log("quiting game");

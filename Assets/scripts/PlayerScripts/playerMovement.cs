@@ -22,9 +22,6 @@ public class playerMovement : MonoBehaviour
         controller = gameObject.GetComponent<CharacterController>();
     }
 
-
-
-    // Update is called once per frame
     void Update()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
@@ -42,8 +39,6 @@ public class playerMovement : MonoBehaviour
             speed = 12f;
         }
 
-
-
         if (Input.GetKeyDown(KeyCode.C))
         {
             controller.height = 0.5f;
@@ -58,12 +53,6 @@ public class playerMovement : MonoBehaviour
         {
             velocity.y = jumpdist;
         }
-
-
-
-
-
-
 
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
