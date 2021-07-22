@@ -5,9 +5,6 @@ using UnityEngine;
 public class GetPath : MonoBehaviour
 {
     public GameObject[] patrolPaths;
-
-
-    // Start is called before the first frame update
     void Start()
     {
         int path_ID = Random.Range(0, patrolPaths.Length);      //Set this as random for now.
@@ -19,5 +16,4 @@ public class GetPath : MonoBehaviour
          we'll set the function to enter a given path name and then pass that into "currentPath.path_Name"*/
         currentPath.path_Name = patrolPaths[path_ID].name;
     }
-
 }

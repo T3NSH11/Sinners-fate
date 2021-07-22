@@ -16,11 +16,6 @@ public class Waypoint_Drone : MonoBehaviour
 
     public bool patrol = true;      //When false, the drone is either stationary, or should be in Alert Mode.
 
-    void Start()
-    {
-
-    }
-
     void Update()
     {
         float wayPDist = Vector3.Distance(gameObject.transform.position, waypoints[wayPNum].transform.position);
