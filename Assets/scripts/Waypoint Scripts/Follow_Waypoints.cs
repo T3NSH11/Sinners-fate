@@ -5,6 +5,7 @@ using UnityEngine;
 public class Follow_Waypoints : MonoBehaviour
 {
     public AI_Waypoint_System current_SetPath;
+    
     public int currentPath_NodeID = 0;
     public float speed;
     public float waypointDist = 1.0f;       //set as private once the desired value has been set.
@@ -12,7 +13,8 @@ public class Follow_Waypoints : MonoBehaviour
     public string path_Name;
 
     Vector3 prevNode_Pos;
-    Vector3 currentNode_Pos; 
+
+    public GameObject[] patrolPaths;
 
     void Start()
     {
@@ -37,5 +39,17 @@ public class Follow_Waypoints : MonoBehaviour
         {
             currentPath_NodeID = 0;
         }
+    }
+
+    public void GetPath()
+    {
+        int path_ID = Random.Range(0, patrolPaths.Length);      //Set this as random for now.
+
+        transform.position = patrolPaths[path_ID].transform.position;
+        Follow_Waypoints currentPath = GetComponent<Follow_Waypoints>();
+
+        /*When we start creating specific cases, where the AI needs to select a specific path, like the path from a vent to an alerted drone,
+         we'll set the function to enter a given path name and then pass that into "currentPath.path_Name"*/
+        currentPath.path_Name = patrolPaths[path_ID].name;
     }
 }
