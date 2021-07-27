@@ -6,6 +6,8 @@ public class dataPadClass : interactibleObj
 {
     public bool Paused;
     public GameObject padText;
+    public AudioSource As;
+    private float AudioTime;
     public override void Action()
     {
         base.Action();
@@ -25,6 +27,12 @@ public class dataPadClass : interactibleObj
 
     public void Resume()
     {
+        if(AudioTime != 0)
+        {
+            As.PlayScheduled(AudioTime);
+            AudioTime = 0;
+        }
+
         padText.SetActive(false);
         Time.timeScale = 1f;
         Paused = false;
@@ -34,6 +42,11 @@ public class dataPadClass : interactibleObj
 
     public void Pause()
     {
+        if (As.isPlaying)
+        {
+            AudioTime = As.time;
+            As.Pause();
+        }
         padText.SetActive(true);
         Time.timeScale = 0f;
         Paused = true;
