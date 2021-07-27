@@ -77,8 +77,6 @@ public class playerRaycast : MonoBehaviour
 
                     Destroy(hit.collider.gameObject);
                     flashlight.SetActive(true);
-                  ;
-
                 }
             }
         }

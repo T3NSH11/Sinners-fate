@@ -16,36 +16,14 @@ public class Tutorial_Handler : MonoBehaviour
 
     public GameObject prop_Flashlight;
     public GameObject flashlight;
-    public GameObject data_Pad;
 
-    // Start is called before the first frame update
     void Start()
     {
-        //prop_Flashlight = tutorial_events[3];
-        //data_Pad = tutorial_events[4];
         PlayVoiceLines(0);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        /*for (int i = 0; i < tutorial_events.Length; i++)
-        {
-            if (i == tutorialIndex)
-            {
-                tutorialPrompts[tutorialIndex].SetActive(true);
-
-                if (i == 1)
-                    tutorialPrompts[0].SetActive(false);
-            }
-            
-
-            else if (i != tutorialIndex)
-            {
-                tutorialPrompts[tutorialIndex].SetActive(false);
-            }
-        }*/
-
         //Event 0
         if (tutorialIndex == 0)
         {
@@ -74,15 +52,7 @@ public class Tutorial_Handler : MonoBehaviour
             Debug.Log("Player sprinted to the opposite Wall");
             tutorialPrompts[1].SetActive(false);
 
-
             //Pickup Flashlight
-        }
-
-        //Event 4
-        if (tutorialIndex == 4)
-        {
-            Debug.Log("Picked up Flashlight");
-            //Pickup Data-Pad.
         }
     }
 
