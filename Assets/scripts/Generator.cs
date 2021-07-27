@@ -5,6 +5,7 @@ using UnityEngine;
 public class Generator : MonoBehaviour
 {
     public int NumberOfpowerCells;
+    gameEnd gameEnd;
 
     void Start()
     {
@@ -29,7 +30,20 @@ public class Generator : MonoBehaviour
     {
         if (NumberOfpowerCells == 1)
         {
-            Destroy(this);
+            // Add intended functionality based on on number of cells collected
+            gameEnd.onGameEnd();
+        }
+        if (NumberOfpowerCells == 2)
+        {
+            
+        }
+        if (NumberOfpowerCells == 3)
+        {
+            
+        }
+        if (NumberOfpowerCells == 4)
+        {
+            
         }
     }
 }

@@ -8,6 +8,8 @@ TagManager:
   - interactible
   - pickUp
   - powerCore
+  - flashlight
+  - Monster
   layers:
   - Default
   - TransparentFX
@@ -17,7 +19,7 @@ TagManager:
   - UI
   - Ground
   - Player
-  - 
+  - Enemy
   - 
   - 
   - 
