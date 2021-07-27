@@ -8,8 +8,12 @@ public class Movement_Collider : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
+        //tutorial_handler.reception_Speakers.Play();
         if(other.gameObject.tag == "Player")
+        {
             tutorial_handler.tutorialIndex++;
+        }
+        tutorial_handler.PlayVoiceLines(tutorial_handler.tutorialIndex);
         gameObject.SetActive(false);
     }
 }
