@@ -6,9 +6,10 @@ public class playerRaycast : MonoBehaviour
 {
     public GameObject cam;
     public GameObject popUp;
+    private GameObject pickUpobj;
+    public GameObject flashlight;
     public float Raylength;
     private bool isPickup;
-    private GameObject pickUpobj;
     public Transform pickupPlacholder;
     void Update()
     {
@@ -56,7 +57,7 @@ public class playerRaycast : MonoBehaviour
 
                 }
             }
-            else if(hit.collider.tag == "powerCore")
+            if(hit.collider.tag == "powerCore")
             {
                 if (Input.GetKeyDown(KeyCode.E))
                 {
@@ -66,8 +67,21 @@ public class playerRaycast : MonoBehaviour
                     Destroy(rb);
 
                 }
+               
+            }
+            if (hit.collider.tag == "flashlight")
+            {
+                popUp.SetActive(true);
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+
+                    Destroy(hit.collider.gameObject);
+                    flashlight.SetActive(true);
+                  ;
+
+                }
             }
         }
-       
+
     }
 }
