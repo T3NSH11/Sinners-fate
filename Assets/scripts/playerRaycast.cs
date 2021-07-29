@@ -9,6 +9,7 @@ public class playerRaycast : MonoBehaviour
     private GameObject pickUpobj;
     public GameObject flashlight;
     public float Raylength;
+    public float timeleft;
     private bool isPickup;
     public Transform pickupPlacholder;
     void Update()
@@ -38,6 +39,11 @@ public class playerRaycast : MonoBehaviour
                 hit.collider.GetComponent<interactibleObj>().Action();
                 popUp.SetActive(true);
                 Debug.Log("hit");
+                timeleft -= Time.deltaTime;
+                if(timeleft < 0)
+                {
+                    popUp.SetActive(false);
+                }
 
             }
             else 
