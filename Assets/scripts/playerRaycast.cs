@@ -38,13 +38,11 @@ public class playerRaycast : MonoBehaviour
                 hit.collider.GetComponent<interactibleObj>().Action();
                 popUp.SetActive(true);
                 Debug.Log("hit");
+                
+              
 
             }
-            else 
-            {
-                // deactivate pop up
-                popUp.SetActive(false);
-            }
+           
 
             if(hit.collider.tag == "pickUp")
             {
@@ -78,6 +76,10 @@ public class playerRaycast : MonoBehaviour
                     Destroy(hit.collider.gameObject);
                     flashlight.SetActive(true);
                 }
+            }
+            if (hit.collider.tag != "flashlight" && hit.collider.tag != "interactible")
+            {
+                popUp.SetActive(false);
             }
         }
 
