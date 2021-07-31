@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MonsterChaseTest : MonoBehaviour
+public class MonsterChase : MonoBehaviour
 {
      public GameObject MonsterContainerObj;
     public bool Onpath;
