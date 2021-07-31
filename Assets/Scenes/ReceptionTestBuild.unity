@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: ddbc4665b93d15a49ae15c06f6f4468f, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
+  m_IndirectSpecularColor: {r: 0.07854115, g: 0.07273518, b: 0.057660766, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4535,6 +4535,21 @@ PrefabInstance:
       propertyPath: MonsterSpeed
       value: 800
       objectReference: {fileID: 0}
+    - target: {fileID: 7448913185547374626, guid: 27f6a65c07013a842a9e61a770fe4913,
+        type: 3}
+      propertyPath: MonsterSpeed
+      value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 7448913185547374626, guid: 27f6a65c07013a842a9e61a770fe4913,
+        type: 3}
+      propertyPath: EnemyMask.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 7448913185547374626, guid: 27f6a65c07013a842a9e61a770fe4913,
+        type: 3}
+      propertyPath: MonsterContainerObj
+      value: 
+      objectReference: {fileID: 75633316}
     m_RemovedComponents:
     - {fileID: 4918085247624356897, guid: 27f6a65c07013a842a9e61a770fe4913, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 27f6a65c07013a842a9e61a770fe4913, type: 3}
@@ -14846,6 +14861,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 751227539, guid: a0a05f4d3435ad54dbac559c7b499d55, type: 3}
+      propertyPath: flashlight
+      value: 
+      objectReference: {fileID: 1318969458}
     - target: {fileID: 4621554993486158835, guid: a0a05f4d3435ad54dbac559c7b499d55,
         type: 3}
       propertyPath: m_Name
@@ -14874,37 +14893,37 @@ PrefabInstance:
     - target: {fileID: 4621554993486158839, guid: a0a05f4d3435ad54dbac559c7b499d55,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.254795
+      value: 11.98
       objectReference: {fileID: 0}
     - target: {fileID: 4621554993486158839, guid: a0a05f4d3435ad54dbac559c7b499d55,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.6105194
+      value: 7.8
       objectReference: {fileID: 0}
     - target: {fileID: 4621554993486158839, guid: a0a05f4d3435ad54dbac559c7b499d55,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.324041
+      value: -6.41
       objectReference: {fileID: 0}
     - target: {fileID: 4621554993486158839, guid: a0a05f4d3435ad54dbac559c7b499d55,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.10731329
       objectReference: {fileID: 0}
     - target: {fileID: 4621554993486158839, guid: a0a05f4d3435ad54dbac559c7b499d55,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4621554993486158839, guid: a0a05f4d3435ad54dbac559c7b499d55,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.99422526
       objectReference: {fileID: 0}
     - target: {fileID: 4621554993486158839, guid: a0a05f4d3435ad54dbac559c7b499d55,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4621554993486158839, guid: a0a05f4d3435ad54dbac559c7b499d55,
         type: 3}
@@ -14914,13 +14933,38 @@ PrefabInstance:
     - target: {fileID: 4621554993486158839, guid: a0a05f4d3435ad54dbac559c7b499d55,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 167.679
       objectReference: {fileID: 0}
     - target: {fileID: 4621554993486158839, guid: a0a05f4d3435ad54dbac559c7b499d55,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4621554993486158842, guid: a0a05f4d3435ad54dbac559c7b499d55,
+        type: 3}
+      propertyPath: flashLight
+      value: 
+      objectReference: {fileID: 1656684127}
+    - target: {fileID: 5509921438618274045, guid: a0a05f4d3435ad54dbac559c7b499d55,
+        type: 3}
+      propertyPath: m_Range
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 5509921438618274045, guid: a0a05f4d3435ad54dbac559c7b499d55,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5509921438618274045, guid: a0a05f4d3435ad54dbac559c7b499d55,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7203020525707228406, guid: a0a05f4d3435ad54dbac559c7b499d55,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dffd5fc163f86bf4da9c0a78f0802e32, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0a05f4d3435ad54dbac559c7b499d55, type: 3}
 --- !u!1 &1092498700
@@ -18457,6 +18501,12 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &1318969458 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2021490487860725463, guid: a0a05f4d3435ad54dbac559c7b499d55,
+    type: 3}
+  m_PrefabInstance: {fileID: 1085140059}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1331050385
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24393,6 +24443,12 @@ Transform:
   m_Father: {fileID: 1593221558}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1656684127 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1317330574596796881, guid: a0a05f4d3435ad54dbac559c7b499d55,
+    type: 3}
+  m_PrefabInstance: {fileID: 1085140059}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1664629475
 PrefabInstance:
   m_ObjectHideFlags: 0
