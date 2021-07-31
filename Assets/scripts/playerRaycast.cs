@@ -9,7 +9,6 @@ public class playerRaycast : MonoBehaviour
     private GameObject pickUpobj;
     public GameObject flashlight;
     public float Raylength;
-    public float timeleft;
     private bool isPickup;
     public Transform pickupPlacholder;
     void Update()
@@ -39,18 +38,11 @@ public class playerRaycast : MonoBehaviour
                 hit.collider.GetComponent<interactibleObj>().Action();
                 popUp.SetActive(true);
                 Debug.Log("hit");
-                timeleft -= Time.deltaTime;
-                if(timeleft < 0)
-                {
-                    popUp.SetActive(false);
-                }
+                
+              
 
             }
-            else 
-            {
-                // deactivate pop up
-                popUp.SetActive(false);
-            }
+           
 
             if(hit.collider.tag == "pickUp")
             {
@@ -84,6 +76,10 @@ public class playerRaycast : MonoBehaviour
                     Destroy(hit.collider.gameObject);
                     flashlight.SetActive(true);
                 }
+            }
+            if (hit.collider.tag != "flashlight" && hit.collider.tag != "interactible")
+            {
+                popUp.SetActive(false);
             }
         }
 
