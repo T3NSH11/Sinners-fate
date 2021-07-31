@@ -79,6 +79,7 @@ public class MonsterChaseTest : MonoBehaviour
     void FollowPlayer()
     {
         gameObject.GetComponent<Rigidbody>().velocity = FOV.directionToPlayer * MonsterSpeed * Time.deltaTime;
+        SearchTime = 0;
     }
 
     void SearchForPlayer()
