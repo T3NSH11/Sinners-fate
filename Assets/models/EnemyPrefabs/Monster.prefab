@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 6968092269988491856}
   - component: {fileID: 6968092269988491863}
   - component: {fileID: 6968092269988491862}
-  - component: {fileID: 4918085247624356897}
-  - component: {fileID: 6968092269988491860}
+  - component: {fileID: 7448913185547374626}
   - component: {fileID: 6968092269988491858}
   - component: {fileID: 6968092269988491851}
   - component: {fileID: 6968092269988491861}
@@ -87,7 +86,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &4918085247624356897
+--- !u!114 &7448913185547374626
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -96,32 +95,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 6968092269988491850}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b66e5d3a3d74a76498bae4af92ce8f95, type: 3}
+  m_Script: {fileID: 11500000, guid: ed4a8adf0e0081b468643bba600a0824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  current_SetPath: {fileID: 0}
-  currentPath_NodeID: 0
-  speed: 0
-  waypointDist: 1
-  rotationSpeed: 5
-  path_Name: 
-  patrolPaths: []
---- !u!114 &6968092269988491860
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6968092269988491850}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32d8eae6697ac6448b3cdea36e662932, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LostLocExp: 0
+  MonsterContainerObj: {fileID: 0}
+  Onpath: 0
+  ContainerPos: {x: 0, y: 0, z: 0}
+  DirectionToContainer: {x: 0, y: 0, z: 0}
+  SearchTime: 0
   PlayerLostLoc: {x: 0, y: 0, z: 0}
   DirectionToLost: {x: 0, y: 0, z: 0}
-  MonsterSpeed: 200
+  MonsterSpeed: 0
+  EnemyMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &6968092269988491858
 MonoBehaviour:
   m_ObjectHideFlags: 0
