@@ -7,10 +7,8 @@ public class MonsterChaseTest : MonoBehaviour
      public GameObject MonsterContainerObj;
     public bool Onpath;
     public Vector3 ContainerPos;
-    public Vector3 DirectionToContainer;
     public float SearchTime;
     public Vector3 PlayerLostLoc;
-    public Vector3 DirectionToLost;
     public float MonsterSpeed;
     public LayerMask EnemyMask;
     FieldOfView FOV;
@@ -24,8 +22,6 @@ public class MonsterChaseTest : MonoBehaviour
     {
         SearchTime += Time.deltaTime;
         ContainerPos = MonsterContainerObj.transform.position;
-        DirectionToContainer = (ContainerPos - transform.position).normalized;
-        DirectionToLost = (PlayerLostLoc - transform.position).normalized;
         Collider[] Enemy = Physics.OverlapSphere(ContainerPos, 1, EnemyMask);
 
         if (FOV.PlayerDetected)
@@ -73,18 +69,18 @@ public class MonsterChaseTest : MonoBehaviour
 
     void GoToPath()
     {
-        gameObject.GetComponent<Rigidbody>().velocity = DirectionToContainer * MonsterSpeed * Time.deltaTime;
+        transform.position = Vector3.MoveTowards(transform.position, ContainerPos, Time.deltaTime * MonsterSpeed);
     }
 
     void FollowPlayer()
     {
-        gameObject.GetComponent<Rigidbody>().velocity = FOV.directionToPlayer * MonsterSpeed * Time.deltaTime;
+        transform.position = Vector3.MoveTowards(transform.position, FOV.playerObj.transform.position, Time.deltaTime * MonsterSpeed);
         SearchTime = 0;
     }
 
     void SearchForPlayer()
     {
-        gameObject.GetComponent<Rigidbody>().velocity = DirectionToLost * MonsterSpeed * Time.deltaTime;
+        transform.position = Vector3.MoveTowards(transform.position, PlayerLostLoc, Time.deltaTime * MonsterSpeed);
     }
 }
 
