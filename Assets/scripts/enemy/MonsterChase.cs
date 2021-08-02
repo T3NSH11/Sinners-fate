@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MonsterChaseTest : MonoBehaviour
+public class MonsterChase : MonoBehaviour
 {
-     public GameObject MonsterContainerObj;
+     public GameObject PathTargetObj;
     public bool Onpath;
-    public Vector3 ContainerPos;
+    public Vector3 PathTargetPos;
     public float SearchTime;
     public Vector3 PlayerLostLoc;
     public float MonsterSpeed;
@@ -20,9 +20,10 @@ public class MonsterChaseTest : MonoBehaviour
 
     void Update()
     {
+        Debug.Log("following player" + FOV.PlayerDetected);
         SearchTime += Time.deltaTime;
-        ContainerPos = MonsterContainerObj.transform.position;
-        Collider[] Enemy = Physics.OverlapSphere(ContainerPos, 1, EnemyMask);
+        PathTargetPos = PathTargetObj.transform.position;
+        Collider[] Enemy = Physics.OverlapSphere(PathTargetPos, 1, EnemyMask);
 
         if (FOV.PlayerDetected)
         {
@@ -63,18 +64,20 @@ public class MonsterChaseTest : MonoBehaviour
 
         if (FOV.PlayerDetected)
         {
+            
             FollowPlayer();
         }
     }
 
     void GoToPath()
     {
-        transform.position = Vector3.MoveTowards(transform.position, ContainerPos, Time.deltaTime * MonsterSpeed);
+        transform.position = Vector3.MoveTowards(transform.position, PathTargetPos, Time.deltaTime * MonsterSpeed);
     }
 
     void FollowPlayer()
     {
         transform.position = Vector3.MoveTowards(transform.position, FOV.playerObj.transform.position, Time.deltaTime * MonsterSpeed);
+          
         SearchTime = 0;
     }
 

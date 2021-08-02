@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6968092269988491856}
   - component: {fileID: 6968092269988491863}
   - component: {fileID: 6968092269988491862}
-  - component: {fileID: 7448913185547374626}
+  - component: {fileID: 240914203944849409}
   - component: {fileID: 6968092269988491858}
   - component: {fileID: 6968092269988491851}
   - component: {fileID: 6968092269988491861}
@@ -86,7 +86,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &7448913185547374626
+--- !u!114 &240914203944849409
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -98,13 +98,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed4a8adf0e0081b468643bba600a0824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MonsterContainerObj: {fileID: 0}
+  PathTargetObj: {fileID: 0}
   Onpath: 0
-  ContainerPos: {x: 0, y: 0, z: 0}
-  DirectionToContainer: {x: 0, y: 0, z: 0}
+  PathTargetPos: {x: 0, y: 0, z: 0}
   SearchTime: 0
   PlayerLostLoc: {x: 0, y: 0, z: 0}
-  DirectionToLost: {x: 0, y: 0, z: 0}
   MonsterSpeed: 0
   EnemyMask:
     serializedVersion: 2
