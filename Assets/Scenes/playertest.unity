@@ -123,6 +123,25 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &2186446 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4240300168609406580, guid: a0b85b6f827ab31419aa8b40907168b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 6812620652618247337}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2186450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2186446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 1
 --- !u!1 &19459272
 GameObject:
   m_ObjectHideFlags: 0
@@ -378,9 +397,9 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &120031108 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6812620652603468589, guid: a0b85b6f827ab31419aa8b40907168b1,
+--- !u!224 &120031112 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6812620652603468590, guid: a0b85b6f827ab31419aa8b40907168b1,
     type: 3}
   m_PrefabInstance: {fileID: 6812620652618247337}
   m_PrefabAsset: {fileID: 0}
@@ -390,6 +409,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6812620652618247337}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &232916989 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6374420372736022677, guid: a0b85b6f827ab31419aa8b40907168b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 6812620652618247337}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a4db7a114972834c8e4117be1d82ba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &255079770
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -489,6 +520,12 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: dffd5fc163f86bf4da9c0a78f0802e32, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af0f4bb57b74b3b4c80a262dfa5fc6fd, type: 3}
+--- !u!1 &267596419 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2021490487860725463, guid: a0a05f4d3435ad54dbac559c7b499d55,
+    type: 3}
+  m_PrefabInstance: {fileID: 4621554993985763250}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &390039301 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3029032871660112297, guid: af0f4bb57b74b3b4c80a262dfa5fc6fd,
@@ -797,6 +834,42 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1016495232 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 476248385377071712, guid: a0b85b6f827ab31419aa8b40907168b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 6812620652618247337}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1016495234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1016495232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aa08ab6e0800fa44ae55d278d1423e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Content: {fileID: 120031112}
+  m_Horizontal: 0
+  m_Vertical: 1
+  m_MovementType: 1
+  m_Elasticity: 0.1
+  m_Inertia: 1
+  m_DecelerationRate: 0.135
+  m_ScrollSensitivity: 1
+  m_Viewport: {fileID: 0}
+  m_HorizontalScrollbar: {fileID: 0}
+  m_VerticalScrollbar: {fileID: 232916989}
+  m_HorizontalScrollbarVisibility: 0
+  m_VerticalScrollbarVisibility: 0
+  m_HorizontalScrollbarSpacing: 0
+  m_VerticalScrollbarSpacing: 0
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1179343557
 GameObject:
   m_ObjectHideFlags: 0
@@ -890,6 +963,12 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &1249589846 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1317330574596796881, guid: a0a05f4d3435ad54dbac559c7b499d55,
+    type: 3}
+  m_PrefabInstance: {fileID: 4621554993985763250}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1330062365
 GameObject:
   m_ObjectHideFlags: 0
@@ -1094,7 +1173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Paused: 0
-  padText: {fileID: 120031108}
+  padText: {fileID: 2186446}
   As: {fileID: 2027923206}
 --- !u!1 &2027923205
 GameObject:
@@ -1234,6 +1313,10 @@ PrefabInstance:
       propertyPath: popUp
       value: 
       objectReference: {fileID: 166799396}
+    - target: {fileID: 751227539, guid: a0a05f4d3435ad54dbac559c7b499d55, type: 3}
+      propertyPath: flashlight
+      value: 
+      objectReference: {fileID: 267596419}
     - target: {fileID: 4621554993486158835, guid: a0a05f4d3435ad54dbac559c7b499d55,
         type: 3}
       propertyPath: m_Name
@@ -1294,6 +1377,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4621554993486158842, guid: a0a05f4d3435ad54dbac559c7b499d55,
+        type: 3}
+      propertyPath: flashLight
+      value: 
+      objectReference: {fileID: 1249589846}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0a05f4d3435ad54dbac559c7b499d55, type: 3}
 --- !u!1001 &6812620652618247337
@@ -1303,10 +1391,198 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2444758138186567376, guid: a0b85b6f827ab31419aa8b40907168b1,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 70.698
+      objectReference: {fileID: 0}
+    - target: {fileID: 2444758138186567376, guid: a0b85b6f827ab31419aa8b40907168b1,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 449.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 2444758138186567376, guid: a0b85b6f827ab31419aa8b40907168b1,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 364.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 2444758138186567376, guid: a0b85b6f827ab31419aa8b40907168b1,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.010025
+      objectReference: {fileID: 0}
+    - target: {fileID: 3116019522896972990, guid: a0b85b6f827ab31419aa8b40907168b1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4061055058149835824, guid: a0b85b6f827ab31419aa8b40907168b1,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4061055058149835824, guid: a0b85b6f827ab31419aa8b40907168b1,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4061055058149835824, guid: a0b85b6f827ab31419aa8b40907168b1,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240300168609406580, guid: a0b85b6f827ab31419aa8b40907168b1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388370389148599513, guid: a0b85b6f827ab31419aa8b40907168b1,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388370389148599513, guid: a0b85b6f827ab31419aa8b40907168b1,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5009691043971748411, guid: a0b85b6f827ab31419aa8b40907168b1,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 5009691043971748411, guid: a0b85b6f827ab31419aa8b40907168b1,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 450
+      objectReference: {fileID: 0}
+    - target: {fileID: 5009691043971748411, guid: a0b85b6f827ab31419aa8b40907168b1,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5009691043971748411, guid: a0b85b6f827ab31419aa8b40907168b1,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.0005188
+      objectReference: {fileID: 0}
+    - target: {fileID: 5280343927653544337, guid: a0b85b6f827ab31419aa8b40907168b1,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5280343927653544337, guid: a0b85b6f827ab31419aa8b40907168b1,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.34023896
+      objectReference: {fileID: 0}
+    - target: {fileID: 5280343927653544337, guid: a0b85b6f827ab31419aa8b40907168b1,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.00000006922179
+      objectReference: {fileID: 0}
+    - target: {fileID: 6374420372736022677, guid: a0b85b6f827ab31419aa8b40907168b1,
+        type: 3}
+      propertyPath: m_Direction
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6812620652603468588, guid: a0b85b6f827ab31419aa8b40907168b1,
+        type: 3}
+      propertyPath: m_Text
+      value: 'The Horus Heresy is a dark, far future military space opera[1] concerning
+        an intergalactic civil war within the nascent Imperium of Man, and which
+        constitutes a cornerstone event of the dystopian science fantasy Warhammer
+        40,000 universe. The Horus Heresy is presented as a major chapter of conflict
+        in the Warhammer 40,000 lore: it is caused by a Chaos plot to foil the Imperium''s
+        leader and founder, the mysterious Emperor of Man, by fomenting rebellion
+        and internecine warfare in the expanding Imperium of Man. The story focuses
+        on the Emperor''s 18 genetically engineered sons, the Primarchs, and the
+        legions of genetically-enhanced superhuman soldiers that they lead, the Legiones
+        Astartes, which find themselves divided into loyalist and traitor factions
+        as they struggle for religious hegemony.[2]
+
+
+
+        The shared universe
+        was originally created in 1987 by Games Workshop, parent company of series
+        publisher Black Library, as the campaign setting for the Warhammer 40,000
+        tabletop miniatures wargame[3] and in 2006 Black Library began publishing
+        The Horus Heresy series. The series consists of full-length novels, and novel-length
+        compilations of novellas or short stories, written by a number of authors.
+        The series includes new characters as well as establishing the background
+        of previously-established Warhammer 40,000 characters who play an important
+        role in the post-Heresy fictional universe.
+
+
+
+        The first three novels
+        in The Horus Heresy are an opening book trilogy. This trilogy presents some
+        of the background and causes of the Heresy, and describes the start of the
+        conflict. The arc''s focus is on Warmaster Horus, the principal antagonist,
+        and covers about two years in the overall Heresy timeline; most of this period
+        elapses before the rebellion begins. Following the trilogy, the narrative
+        is not strictly sequential and is often presented in nonlinear fashion from
+        book to book.[4] Apart from the initial trilogy, the stories often concern
+        events that happen earlier or later than their position in the series would
+        suggest, or may include time periods already covered in other series titles.
+
+
+
+        The
+        majority of stories in The Horus Heresy are set around the start of the fictional
+        universe''s 31st millennium, in contrast to most Warhammer 40,000 material,
+        which takes place in the 41st millennium.[5] The stories in The Horus Heresy
+        routinely cover the conflict''s background, with some going back centuries
+        before the war (and the 31st millennium) begins. In narrower scope, the entire
+        conflict (including the Heresy proper and its proximate formative period),
+        is depicted as having lasted less than a decade.[citation needed] With few
+        exceptions, the sequence and dating of Heresy events is implied rather than
+        stated in The Horus Heresy stories.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6812620652603468589, guid: a0b85b6f827ab31419aa8b40907168b1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6812620652603468590, guid: a0b85b6f827ab31419aa8b40907168b1,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 729.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6812620652603468590, guid: a0b85b6f827ab31419aa8b40907168b1,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1322.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6812620652603468590, guid: a0b85b6f827ab31419aa8b40907168b1,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -35.351
+      objectReference: {fileID: 0}
+    - target: {fileID: 6812620652603468590, guid: a0b85b6f827ab31419aa8b40907168b1,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 436.29993
+      objectReference: {fileID: 0}
+    - target: {fileID: 6812620653048438185, guid: a0b85b6f827ab31419aa8b40907168b1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6812620653150344516, guid: a0b85b6f827ab31419aa8b40907168b1,
         type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6812620653150344516, guid: a0b85b6f827ab31419aa8b40907168b1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6812620653150344518, guid: a0b85b6f827ab31419aa8b40907168b1,
+        type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6812620653150344536, guid: a0b85b6f827ab31419aa8b40907168b1,
         type: 3}
@@ -1412,6 +1688,41 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6812620653150344537, guid: a0b85b6f827ab31419aa8b40907168b1,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7581511242899493593, guid: a0b85b6f827ab31419aa8b40907168b1,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7581511242899493593, guid: a0b85b6f827ab31419aa8b40907168b1,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7581511242899493593, guid: a0b85b6f827ab31419aa8b40907168b1,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 160
+      objectReference: {fileID: 0}
+    - target: {fileID: 7581511242899493593, guid: a0b85b6f827ab31419aa8b40907168b1,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7581511242899493593, guid: a0b85b6f827ab31419aa8b40907168b1,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -322
+      objectReference: {fileID: 0}
+    - target: {fileID: 7581511242899493593, guid: a0b85b6f827ab31419aa8b40907168b1,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 47
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0b85b6f827ab31419aa8b40907168b1, type: 3}

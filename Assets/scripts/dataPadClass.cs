@@ -13,6 +13,7 @@ public class dataPadClass : interactibleObj
         base.Action();
         if (Input.GetKeyDown(KeyCode.E))
         {
+            padText.SetActive(true);
             if (Paused)
             {
                 Resume();
