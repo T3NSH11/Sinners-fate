@@ -20,9 +20,10 @@ public class playerRaycast : MonoBehaviour
             pickUpobj.transform.position = pickupPlacholder.position;
             if (Input.GetKeyDown(KeyCode.E))
             {
-                isPickup = false;
                 pickUpobj.AddComponent<Rigidbody>();
+                isPickup = false;
                 pickUpobj = null;
+                Debug.Log("hi");
                 
             }
             return;
