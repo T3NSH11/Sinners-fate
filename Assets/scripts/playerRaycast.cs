@@ -23,7 +23,7 @@ public class playerRaycast : MonoBehaviour
                 pickUpobj.AddComponent<Rigidbody>();
                 isPickup = false;
                 pickUpobj = null;
-                Debug.Log("hi");
+                
                 
             }
             return;
@@ -45,7 +45,7 @@ public class playerRaycast : MonoBehaviour
             }
            
 
-            if(hit.collider.tag == "pickUp")
+            if(hit.collider.tag == "pickUp" || hit.collider.tag == "powerCore")
             {
                 if (Input.GetKeyDown(KeyCode.E))
                 {
@@ -56,18 +56,7 @@ public class playerRaycast : MonoBehaviour
 
                 }
             }
-            if(hit.collider.tag == "powerCore")
-            {
-                if (Input.GetKeyDown(KeyCode.E))
-                {
-                    isPickup = true;
-                    pickUpobj = hit.collider.gameObject;
-                    Rigidbody rb = hit.collider.GetComponent<Rigidbody>();
-                    Destroy(rb);
-
-                }
-               
-            }
+   
             if (hit.collider.tag == "flashlight")
             {
                 popUp.SetActive(true);
