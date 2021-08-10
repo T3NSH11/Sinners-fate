@@ -20,8 +20,7 @@ public class ObstacleAvoidance : MonoBehaviour
     {
         ForceFeildPos = gameObject.transform.position;
         ObstacleCollider = Physics.OverlapSphere(ForceFeildPos, ForceFieldRad, ObstacleLayer);
-
-        //gameObject.GetComponent<Rigidbody>().velocity -= DirectionsToObstacles[0] * PushForce * Time.deltaTime;
+        
         if (ObstacleCollider.Length > 0)
         {
             for (int i = 0; i < ObstacleCollider.Length; i++)
