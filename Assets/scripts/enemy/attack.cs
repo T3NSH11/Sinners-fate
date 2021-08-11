@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class attack : MonoBehaviour
 {
-    public bool playerInRange;
+    public GameObject deathui;
     public GameObject player;
     public float enemyAttackRange;
+
 
 
 
@@ -14,11 +15,14 @@ public class attack : MonoBehaviour
     {
         if (Vector3.Distance(transform.position, player.transform.position) < enemyAttackRange)
         {
-            playerInRange = true;
+            deathui.SetActive(true);
+            Time.timeScale = 0f;
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = true;
         }
         else
         {
-            playerInRange = false;
+            deathui.SetActive(false);
         }
     }
 }
