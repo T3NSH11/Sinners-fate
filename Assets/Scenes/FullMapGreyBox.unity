@@ -2043,7 +2043,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   current_SetPath: {fileID: 1593221557}
   currentPath_NodeID: 0
-  speed: 15
+  speed: 5
   waypointDist: 1
   rotationSpeed: 5
   path_Name: MonsterPath
@@ -21309,6 +21309,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4621554993486158836, guid: a0a05f4d3435ad54dbac559c7b499d55,
+        type: 3}
+      propertyPath: speed
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4621554993486158839, guid: a0a05f4d3435ad54dbac559c7b499d55,
         type: 3}
