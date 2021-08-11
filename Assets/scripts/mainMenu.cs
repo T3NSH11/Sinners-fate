@@ -15,6 +15,6 @@ public class mainMenu : MonoBehaviour
     public void loadlevel()
     {
         Debug.Log("level Loading");
-        SceneManager.LoadScene("build1");
+        SceneManager.LoadScene("FullMapGreyBox");
     }
 }

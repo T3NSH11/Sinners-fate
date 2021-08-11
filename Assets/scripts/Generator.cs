@@ -31,7 +31,6 @@ public class Generator : MonoBehaviour
         if (NumberOfpowerCells == 1)
         {
             // Add intended functionality based on on number of cells collected
-            gameEnd.onGameEnd();
         }
         if (NumberOfpowerCells == 2)
         {
