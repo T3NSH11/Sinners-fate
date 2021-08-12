@@ -10,6 +10,7 @@ TagManager:
   - powerCore
   - flashlight
   - Monster
+  - Door
   layers:
   - Default
   - TransparentFX

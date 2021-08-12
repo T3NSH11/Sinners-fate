@@ -4,23 +4,35 @@ using UnityEngine;
 
 public class DoorTrigger : MonoBehaviour
 {
-    public enum DoorGroup {Group1, Group2, Group3, Group4};
-    bool IsUnlocked;
-    public DoorGroup Doorgroup;
+    public bool IsUnlocked;
+    public int Doorgroup;
+    
+    Animator DoorAnimator;
+
+    void start()
+    {
+        DoorAnimator = gameObject.GetComponent<Animator>();
+    }
+    void Update()
+    {
+        IsUnlocked = DoorAnimator.GetBool("IsUnlocked");
+    }
 
     public void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Player")
+        if(Doorgroup == 1 && other.gameObject.tag == "Player" && IsUnlocked == true)
         {
-            
+            DoorAnimator.SetBool("Triggered", true);
+        }
+
+        if(Doorgroup > 1 && IsUnlocked == true)
+        {
+            DoorAnimator.SetBool("Triggered", true);
         }
     }
 
     public void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "Player")
-        {
-            
-        }
+        DoorAnimator.SetBool("Triggered", false);
     }
 }
