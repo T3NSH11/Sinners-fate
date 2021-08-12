@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class DoorTrigger : MonoBehaviour
 {
-    public GameObject door;
-    public int rotationVal;
+    public enum DoorGroup {Group1, Group2, Group3, Group4};
+    bool IsUnlocked;
+    public DoorGroup Doorgroup;
 
     public void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "Player")
         {
-            door.transform.rotation = Quaternion.Euler(0, rotationVal, 0);
+            
         }
     }
 
@@ -19,7 +20,7 @@ public class DoorTrigger : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            door.transform.rotation = Quaternion.Euler(0, 0, 0);
+            
         }
     }
 }
