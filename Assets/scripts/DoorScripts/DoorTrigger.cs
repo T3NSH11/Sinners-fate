@@ -7,7 +7,7 @@ public class DoorTrigger : MonoBehaviour
     public bool IsUnlocked;
     public int Doorgroup;
     
-    Animator DoorAnimator;
+    public Animator DoorAnimator;
 
     void start()
     {
@@ -16,6 +16,11 @@ public class DoorTrigger : MonoBehaviour
     void Update()
     {
         IsUnlocked = DoorAnimator.GetBool("IsUnlocked");
+
+        if (DoorAnimator.GetCurrentAnimatorStateInfo(0).IsName("None"))
+        {
+            DoorAnimator.SetBool("UnTriggered", false);
+        }
     }
 
     public void OnTriggerEnter(Collider other)
@@ -35,7 +40,7 @@ public class DoorTrigger : MonoBehaviour
     {
         if(other.gameObject.tag == "Player" || other.gameObject.tag == "Monster")
         {
-            DoorAnimator.SetBool("Triggered", false);
+            DoorAnimator.SetBool("UnTriggered", true);
         }
     }
 }
