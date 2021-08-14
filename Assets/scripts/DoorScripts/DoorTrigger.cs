@@ -20,7 +20,7 @@ public class DoorTrigger : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if(Doorgroup == 1 && other.gameObject.tag == "Player" && IsUnlocked == true)
+        if(Doorgroup == 1 && (other.gameObject.tag == "Player" || other.gameObject.tag == "Monster") && IsUnlocked == true)
         {
             DoorAnimator.SetBool("Triggered", true);
         }
@@ -33,6 +33,9 @@ public class DoorTrigger : MonoBehaviour
 
     public void OnTriggerExit(Collider other)
     {
-        DoorAnimator.SetBool("Triggered", false);
+        if(other.gameObject.tag == "Player" || other.gameObject.tag == "Monster")
+        {
+            DoorAnimator.SetBool("Triggered", false);
+        }
     }
 }
