@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 6968092269988491858}
   - component: {fileID: 6968092269988491851}
   - component: {fileID: 6968092269988491861}
-  - component: {fileID: 2202485355762827744}
   - component: {fileID: 6968092269988491857}
   m_Layer: 8
   m_Name: Monster
@@ -169,20 +168,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2202485355762827744
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6968092269988491850}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62a554568c9d6cb4ea9a77daf97a17bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  enemyAttackRange: 0
 --- !u!54 &6968092269988491857
 Rigidbody:
   m_ObjectHideFlags: 0
