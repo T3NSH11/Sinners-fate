@@ -20,21 +20,25 @@ public class DoorLockHandler : MonoBehaviour
             if (Doors[i].GetComponent<DoorTrigger>().Doorgroup == 1 && Generator.GetComponent<Generator>().NumberOfpowerCells >= 1)
             {
                 Doors[i].GetComponent<DoorTrigger>().IsUnlocked = true;
+                Doors[i].transform.parent.GetChild(2).GetChild(0).GetComponent<Light>().color = Color.green;
             }
 
             if (Doors[i].GetComponent<DoorTrigger>().Doorgroup == 2 && Generator.GetComponent<Generator>().NumberOfpowerCells >= 2)
             {
                 Doors[i].GetComponent<DoorTrigger>().IsUnlocked = true;
+                Doors[i].transform.parent.GetChild(2).GetChild(0).GetComponent<Light>().color = Color.green;
             }
 
             if (Doors[i].GetComponent<DoorTrigger>().Doorgroup == 3 && Generator.GetComponent<Generator>().NumberOfpowerCells >= 3)
             {
                 Doors[i].GetComponent<DoorTrigger>().IsUnlocked = true;
+                Doors[i].transform.parent.GetChild(2).GetChild(0).GetComponent<Light>().color = Color.green;
             }
 
             if (Doors[i].GetComponent<DoorTrigger>().Doorgroup == 4 && Generator.GetComponent<Generator>().NumberOfpowerCells >= 4)
             {
                 Doors[i].GetComponent<DoorTrigger>().IsUnlocked = true;
+                Doors[i].transform.parent.GetChild(2).GetChild(0).GetComponent<Light>().color = Color.green;
             }
         }
     }
