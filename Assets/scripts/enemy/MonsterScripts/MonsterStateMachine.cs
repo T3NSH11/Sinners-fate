@@ -30,7 +30,7 @@ public class MonsterStateMachine : MonoBehaviour
     public bool teleport;
     public GameObject[] PathNodes;
     public GameObject NearestNode;
-    public float LeastDistanceToPlayer;
+    public float LeastDistanceToPlayer = 99999999;
 
     void Start()
     {
