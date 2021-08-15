@@ -17,13 +17,10 @@ public class NodeClass : MonoBehaviour
     
     private void Update()
     {
-        if (NodeRenderer.isVisible)
+        Enabled = !NodeRenderer.isVisible;
+        if (Enabled)
         {
-            Enabled = false;
-        }
-        else
-        {
-            Enabled = true;
+            Debug.Log("seeee");
         }
 
         DistanceFromPlayer = Vector3.Distance(Player.transform.position, gameObject.transform.position);

@@ -9,38 +9,28 @@ public class DoorTrigger : MonoBehaviour
     
     public Animator DoorAnimator;
 
-    void start()
+    void Start()
     {
-        DoorAnimator = gameObject.GetComponent<Animator>();
-    }
-    void Update()
-    {
-        IsUnlocked = DoorAnimator.GetBool("IsUnlocked");
-
-        if (DoorAnimator.GetCurrentAnimatorStateInfo(0).IsName("None"))
-        {
-            DoorAnimator.SetBool("UnTriggered", false);
-        }
+        DoorAnimator = gameObject.GetComponentInChildren<Animator>();
     }
 
     public void OnTriggerEnter(Collider other)
     {
-        if(Doorgroup == 1 && (other.gameObject.tag == "Player" || other.gameObject.tag == "Monster") && IsUnlocked == true)
+        if(IsUnlocked)
         {
-            DoorAnimator.SetBool("Triggered", true);
-        }
-
-        if(Doorgroup > 1 && IsUnlocked == true)
-        {
-            DoorAnimator.SetBool("Triggered", true);
+            if(Doorgroup != 1 || other.gameObject.tag == "Player")
+            {
+                DoorAnimator.SetBool("Open", true);
+            }
         }
     }
 
     public void OnTriggerExit(Collider other)
     {
+        //TODO bug here!
         if(other.gameObject.tag == "Player" || other.gameObject.tag == "Monster")
         {
-            DoorAnimator.SetBool("UnTriggered", true);
+            DoorAnimator.SetBool("Open", false);
         }
     }
 }

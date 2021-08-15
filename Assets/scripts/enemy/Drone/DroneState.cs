@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class DroneState : MonoBehaviour
+public class DroneState
 {
     public virtual void DroneUpdate(DroneBehavior DroneStateMachine)
     {
