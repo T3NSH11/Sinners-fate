@@ -26,5 +26,10 @@ public class FollowPath : MonsterState
         {
             MonsterState.SwitchState(new FollowPlayer());
         }
+
+        if (MonsterState.teleport == true)
+        {
+            MonsterState.SwitchState(new Teleport());
+        }
     }
 }

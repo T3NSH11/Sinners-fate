@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Scan : DroneState
@@ -8,21 +6,25 @@ public class Scan : DroneState
     {
         if (DroneStateMachine.PlayerDetected)
         {
-            DroneStateMachine.alertmeter += Time.deltaTime; 
+            DroneStateMachine.alertmeter += 0.07f * Time.deltaTime;
+            DroneStateMachine.AlertBar.transform.localScale = DroneStateMachine.scalechange;
+            DroneStateMachine.AlertMeter.SetActive(true);
         }
         else
         {
-            DroneStateMachine.alertmeter -= Time.deltaTime;
+            DroneStateMachine.alertmeter -= 0.03f * Time.deltaTime;
+            DroneStateMachine.AlertBar.transform.localScale = DroneStateMachine.scalechange;
         }
 
-        if (DroneStateMachine.alertmeter >= 100)
+        if (DroneStateMachine.alertmeter >= 0.15)
         {
             DroneStateMachine.SwitchState(new Alarm());
         }
 
-        if (!DroneStateMachine.PlayerDetected)
+        if (!DroneStateMachine.PlayerDetected && DroneStateMachine.alertmeter <= 0)
         {
             DroneStateMachine.SwitchState(new Follow_Waypoints1());
+            DroneStateMachine.AlertMeter.SetActive(false);
         }
     }
 }

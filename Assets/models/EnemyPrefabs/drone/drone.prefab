@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 7210601347114277943}
   - component: {fileID: 3884049494492855336}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: AlertMeterBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -110,10 +110,9 @@ Transform:
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0.009, y: 0.832, z: 0}
   m_LocalScale: {x: 0.15692984, y: 0.092366, z: 0.014495834}
-  m_Children:
-  - {fileID: 468400422772710176}
+  m_Children: []
   m_Father: {fileID: 2871824871795832584}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!33 &1561888596917836521
 MeshFilter:
@@ -291,6 +290,7 @@ Transform:
   - {fileID: 1078730394668791260}
   - {fileID: 4969555882675279073}
   - {fileID: 4878129001854302873}
+  - {fileID: 468400422772710176}
   - {fileID: 8433243001514383919}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -308,7 +308,7 @@ GameObject:
   - component: {fileID: 2013161659196206105}
   - component: {fileID: 7799738104390508275}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: AlertMeterBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -321,12 +321,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3808205667294256201}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.0001, z: -0}
-  m_LocalScale: {x: 0.96236116, y: 1, z: 0.69589}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0.009000003, y: 0.8319999, z: 0}
+  m_LocalScale: {x: 0, y: 0.092365995, z: 0.010087505}
   m_Children: []
-  m_Father: {fileID: 8433243001514383919}
-  m_RootOrder: 0
+  m_Father: {fileID: 2871824871795832584}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1410645063562403417
 MeshFilter:

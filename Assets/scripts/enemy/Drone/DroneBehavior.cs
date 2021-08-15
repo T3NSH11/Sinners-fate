@@ -16,19 +16,24 @@ public class DroneBehavior : MonoBehaviour
     public GameObject[] patrolPaths;
     public DroneState currentstate;
     public bool PlayerDetected;
+    public GameObject AlertBar;
+    public Vector3 scalechange;
+    public GameObject AlertMeter;
+    public GameObject Monster;
 
     void Start()
     {
-        FOV = gameObject.GetComponent<FieldOfView>();
+        FOV = gameObject.GetComponentInChildren<FieldOfView>();
         currentstate = new Follow_Waypoints1();
         current_SetPath = GameObject.Find(path_Name).GetComponent<AI_Waypoint_System>();
         prevNode_Pos = transform.position;
-        PlayerDetected = FOV.PlayerDetected;
     }
 
     void Update()
     {
+        PlayerDetected = FOV.PlayerDetected;
         currentstate.DroneUpdate(this);
+        scalechange = new Vector3(alertmeter, 0.01f, 0.01f);
     }
 
     public void SwitchState(DroneState droneState)

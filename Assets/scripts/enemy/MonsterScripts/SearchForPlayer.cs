@@ -17,5 +17,10 @@ public class SearchForPlayer : MonsterState
         {
             MonsterState.SwitchState(new GoToPath());
         }
+
+        if (MonsterState.teleport == true)
+        {
+            MonsterState.SwitchState(new Teleport());
+        }
     }
 }
