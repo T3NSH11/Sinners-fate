@@ -16,9 +16,14 @@ public class DoorTrigger : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if(IsUnlocked)
+        if(IsUnlocked || other.gameObject.tag == "Monster")
         {
-            if(Doorgroup != 1 || other.gameObject.tag == "Player")
+            if(Doorgroup != 1 && (other.gameObject.tag == "Player" || other.gameObject.tag == "Monster"))
+            {
+                DoorAnimator.SetBool("Open", true);
+            }
+            
+            if(Doorgroup == 1 && other.gameObject.tag == "Player")
             {
                 DoorAnimator.SetBool("Open", true);
             }
