@@ -11,11 +11,14 @@ public class playerRaycast : MonoBehaviour
     public float Raylength;
     private bool isPickup;
     public Transform pickupPlacholder;
+    public playerMovement pm;
     void Update()
     {
         // to stop any further action that has to do with raycasting while an object is picked up
         if (isPickup == true && pickUpobj)
         {
+            pm.canSprint = false;
+            flashlight.SetActive(false);
             pickUpobj.transform.rotation = transform.rotation;
             pickUpobj.transform.position = pickupPlacholder.position;
             if (Input.GetKeyDown(KeyCode.E))
@@ -23,8 +26,9 @@ public class playerRaycast : MonoBehaviour
                 pickUpobj.AddComponent<Rigidbody>();
                 isPickup = false;
                 pickUpobj = null;
-                
-                
+                pm.canSprint = true;
+                flashlight.SetActive(true);
+
             }
             return;
         }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class Generator : MonoBehaviour
 {
     public int NumberOfpowerCells;
+    public GameObject dropText;
     gameEnd gameEnd;
 
     public List<GameObject> tier1Doors = new List<GameObject>();
@@ -32,10 +33,23 @@ public class Generator : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            dropText.SetActive(true);
+        }
+
         if (other.gameObject.CompareTag("powerCore"))
         {
             NumberOfpowerCells ++;
             Destroy(other.gameObject);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            dropText.SetActive(false);
         }
     }
 

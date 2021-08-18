@@ -11,6 +11,7 @@ public class playerMovement : MonoBehaviour
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public float jumpdist;
+    public bool canSprint;
 
     public LayerMask groundMask;
     Vector3 velocity;
@@ -20,6 +21,7 @@ public class playerMovement : MonoBehaviour
     private void Start()
     {
         controller = gameObject.GetComponent<CharacterController>();
+        canSprint = true;
     }
 
     void Update()
@@ -30,13 +32,13 @@ public class playerMovement : MonoBehaviour
         {
             velocity.y = -2f;
         }
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.LeftShift) && canSprint)
         {
-            speed = 6f;
+            speed = 12f;
         }
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
-            speed = 12f;
+            speed = 6f;
         }
 
         if (Input.GetKeyDown(KeyCode.C))
