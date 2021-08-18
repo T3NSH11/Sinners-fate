@@ -15,11 +15,13 @@ public class playerMovement : MonoBehaviour
     public LayerMask groundMask;
     Vector3 velocity;
     bool isGrounded;
+    public bool canSprint;
 
 
     private void Start()
     {
         controller = gameObject.GetComponent<CharacterController>();
+        canSprint = true;
     }
 
     void Update()
@@ -30,13 +32,13 @@ public class playerMovement : MonoBehaviour
         {
             velocity.y = -2f;
         }
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.LeftShift) && canSprint)
         {
             speed = 6f;
         }
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
-            speed = 12f;
+            speed = 4f;
         }
 
         if (Input.GetKeyDown(KeyCode.C))

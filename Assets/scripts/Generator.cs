@@ -6,6 +6,7 @@ public class Generator : MonoBehaviour
 {
     public int NumberOfpowerCells;
     gameEnd gameEnd;
+    public GameObject dropText;
 
     public List<GameObject> tier1Doors = new List<GameObject>();
     public List<GameObject> tier2Doors = new List<GameObject>();
@@ -32,12 +33,26 @@ public class Generator : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            dropText.SetActive(true);
+        }
+
         if (other.gameObject.CompareTag("powerCore"))
         {
             NumberOfpowerCells ++;
             Destroy(other.gameObject);
         }
     }
+
+        private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            dropText.SetActive(false);
+        }
+    }
+
 
     public void collectedPowercells()
     {
