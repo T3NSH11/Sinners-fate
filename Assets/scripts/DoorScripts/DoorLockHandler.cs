@@ -23,27 +23,24 @@ public class DoorLockHandler : MonoBehaviour
             if (Doors[i].GetComponent<DoorTrigger>().Doorgroup == 1 && Generator.GetComponent<Generator>().NumberOfpowerCells >= 0)
             {
                 Doors[i].GetComponent<DoorTrigger>().IsUnlocked = true;
-                Doorlights[i].GetComponentInChildren<Light>().color = Color.green;
-                Doorlights[i].GetComponent<MeshRenderer>().material = Greenmat;
             }
 
             if (Doors[i].GetComponent<DoorTrigger>().Doorgroup == 2 && Generator.GetComponent<Generator>().NumberOfpowerCells >= 1)
             {
                 Doors[i].GetComponent<DoorTrigger>().IsUnlocked = true;
-                Doorlights[i].GetComponentInChildren<Light>().color = Color.green;
-                Doorlights[i].GetComponent<MeshRenderer>().material = Greenmat;
             }
 
             if (Doors[i].GetComponent<DoorTrigger>().Doorgroup == 3 && Generator.GetComponent<Generator>().NumberOfpowerCells >= 2)
             {
                 Doors[i].GetComponent<DoorTrigger>().IsUnlocked = true;
-                Doorlights[i].GetComponentInChildren<Light>().color = Color.green;
-                Doorlights[i].GetComponent<MeshRenderer>().material = Greenmat;
             }
 
             if (Doors[i].GetComponent<DoorTrigger>().Doorgroup == 4 && Generator.GetComponent<Generator>().NumberOfpowerCells >= 3)
             {
                 Doors[i].GetComponent<DoorTrigger>().IsUnlocked = true;
+            }
+            if (Doors[i].GetComponent<DoorTrigger>().IsUnlocked == true)
+            {
                 Doorlights[i].GetComponentInChildren<Light>().color = Color.green;
                 Doorlights[i].GetComponent<MeshRenderer>().material = Greenmat;
             }
