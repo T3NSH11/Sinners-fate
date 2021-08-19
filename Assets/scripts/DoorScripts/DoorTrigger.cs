@@ -6,8 +6,9 @@ public class DoorTrigger : MonoBehaviour
 {
     public bool IsUnlocked;
     public int Doorgroup;
-    
     public Animator DoorAnimator;
+    public AudioSource DoorOpenSound;
+    public AudioSource DoorCloseSound;
 
     void Start()
     {
@@ -21,11 +22,13 @@ public class DoorTrigger : MonoBehaviour
             if(Doorgroup != 1 && (other.gameObject.tag == "Player" || other.gameObject.tag == "Monster"))
             {
                 DoorAnimator.SetBool("Open", true);
+                DoorOpenSound.Play();
             }
             
             if(Doorgroup == 1 && other.gameObject.tag == "Player")
             {
                 DoorAnimator.SetBool("Open", true);
+                DoorOpenSound.Play();
             }
         }
     }
@@ -36,6 +39,7 @@ public class DoorTrigger : MonoBehaviour
         if(other.gameObject.tag == "Player" || other.gameObject.tag == "Monster")
         {
             DoorAnimator.SetBool("Open", false);
+            DoorCloseSound.Play();
         }
     }
 }
