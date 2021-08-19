@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DroneBehavior : MonoBehaviour
 {
+    public AudioSource AlarmSound;
     public FieldOfView FOV;
     public float alertmeter;
     public AI_Waypoint_System current_SetPath;
