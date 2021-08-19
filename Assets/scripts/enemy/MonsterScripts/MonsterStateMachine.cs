@@ -31,6 +31,7 @@ public class MonsterStateMachine : MonoBehaviour
     public GameObject[] PathNodes;
     public GameObject NearestNode;
     public float LeastDistanceToPlayer;
+    public GameObject monster;
 
     void Start()
     {
@@ -43,6 +44,14 @@ public class MonsterStateMachine : MonoBehaviour
 
     void Update()
     {
+        if (Vector3.Distance(monster.transform.position, PathTargetObj.transform.position) < 0.5)
+        {
+            Onpath = true;
+        }
+        else
+        {
+            Onpath = false;
+        }
 
         EnemyCollider = Physics.OverlapSphere(PathTargetPos, 1, EnemyMask);
 
@@ -57,6 +66,7 @@ public class MonsterStateMachine : MonoBehaviour
         DistanceToLost = Vector3.Distance(gameObject.transform.position, PlayerLostLoc);
 
         currentstate.MonsterUpdate(this);
+        Debug.Log(currentstate);
     }
 
     public void SwitchState(MonsterState monsterState)

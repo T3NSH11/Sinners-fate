@@ -12,6 +12,7 @@ TagManager:
   - Monster
   - Door
   - PathNode
+  - DoorLights
   layers:
   - Default
   - TransparentFX

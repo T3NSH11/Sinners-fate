@@ -6,7 +6,8 @@ public class SearchForPlayer : MonsterState
 {
     public override void MonsterUpdate(MonsterStateMachine MonsterState)
     {
-        MonsterState.transform.position = Vector3.MoveTowards(MonsterState.transform.position, MonsterState.PlayerLostLoc, Time.deltaTime * MonsterState.MonsterSpeed);
+        MonsterState.monster.transform.position = Vector3.MoveTowards(MonsterState.monster.transform.position, MonsterState.PlayerLostLoc, Time.deltaTime * MonsterState.MonsterSpeed);
+        MonsterState.SearchTime += Time.deltaTime;
   
         if (MonsterState.FOV.PlayerDetected)
         {
@@ -22,5 +23,6 @@ public class SearchForPlayer : MonsterState
         {
             MonsterState.SwitchState(new Teleport());
         }
+
     }
 }
