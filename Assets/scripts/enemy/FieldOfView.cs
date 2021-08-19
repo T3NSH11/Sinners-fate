@@ -43,7 +43,11 @@ public class FieldOfView : MonoBehaviour
                 float distanceToTarget = Vector3.Distance(transform.position, PlayerTransform.position);
 
                 if (!Physics.Raycast(transform.position, directionToPlayer, distanceToTarget, WallMask))
+                {
                     PlayerDetected = true;
+                    Debug.Log("Player Spotted");
+
+                }
                 else
                     PlayerDetected = false;
             }
