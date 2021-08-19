@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17234656, g: 0.14654851, b: 0.10974064, a: 1}
+  m_IndirectSpecularColor: {r: 0.17234674, g: 0.14654866, b: 0.10974076, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -431,7 +431,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: af0f4bb57b74b3b4c80a262dfa5fc6fd,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: af0f4bb57b74b3b4c80a262dfa5fc6fd,
         type: 3}
@@ -576,6 +576,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NumberOfpowerCells: 0
+  dropText: {fileID: 0}
+  tier1Doors: []
+  tier2Doors: []
+  tier3Doors: []
+  tier4Doors: []
 --- !u!65 &438119430
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -841,6 +846,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NumberOfpowerCells: 0
+  dropText: {fileID: 0}
+  tier1Doors: []
+  tier2Doors: []
+  tier3Doors: []
+  tier4Doors: []
 --- !u!1 &1718217612
 GameObject:
   m_ObjectHideFlags: 0
@@ -854,6 +864,7 @@ GameObject:
   - component: {fileID: 1718217614}
   - component: {fileID: 1718217613}
   - component: {fileID: 1718217617}
+  - component: {fileID: 1718217618}
   m_Layer: 0
   m_Name: Cube
   m_TagString: interactible
@@ -949,45 +960,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c9e7eb1878e65e449107c372f818db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Paused: 0
-  padText: {fileID: 2186446}
-  As: {fileID: 2027923206}
---- !u!1 &2027923205
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2027923207}
-  - component: {fileID: 2027923206}
-  m_Layer: 0
-  m_Name: Audio Source
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!82 &2027923206
+  Paused: 1
+  As: {fileID: 1718217618}
+  dataEntry: {fileID: 0}
+--- !u!82 &1718217618
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2027923205}
+  m_GameObject: {fileID: 1718217612}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 8574e8dd77b64714c89767909586457a, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.3
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 138
+  Priority: 128
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -1025,7 +1019,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -1065,20 +1059,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!4 &2027923207
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2027923205}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.342312, y: 5.9877143, z: -22.198875}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &4621554993985763250
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1242,12 +1222,12 @@ PrefabInstance:
     - target: {fileID: 5280343927653544337, guid: a0b85b6f827ab31419aa8b40907168b1,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.34023896
+      value: 0.3402389
       objectReference: {fileID: 0}
     - target: {fileID: 5280343927653544337, guid: a0b85b6f827ab31419aa8b40907168b1,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.00000006922179
+      value: 0.00000009229571
       objectReference: {fileID: 0}
     - target: {fileID: 6374420372736022677, guid: a0b85b6f827ab31419aa8b40907168b1,
         type: 3}
@@ -1310,7 +1290,7 @@ PrefabInstance:
     - target: {fileID: 6812620652603468589, guid: a0b85b6f827ab31419aa8b40907168b1,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6812620652603468590, guid: a0b85b6f827ab31419aa8b40907168b1,
         type: 3}

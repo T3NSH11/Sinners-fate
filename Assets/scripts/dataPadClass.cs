@@ -4,29 +4,42 @@ using UnityEngine;
 
 public class dataPadClass : interactibleObj
 {
-    public bool Paused;
-    public GameObject padText;
+    public bool Paused = true;
+    //public GameObject padText;
     public AudioSource As;
-    private float AudioTime;
+    public AudioClip dataEntry;
+    //private float AudioTime;
     public override void Action()
     {
         base.Action();
+
+        
+
         if (Input.GetKeyDown(KeyCode.E))
         {
-            padText.SetActive(true);
+            //padText.SetActive(true);
             if (Paused)
             {
-                Resume();
+                //Resume();
+
+                As.clip = dataEntry;
+                As.Play();
+                Paused = false;
+
             }
             else
             {
-                Pause();
+                //Pause();
+
+                As.clip = dataEntry;
+                As.Pause();
+                Paused = true;
             }
         }
 
     }
 
-    public void Resume()
+    /*public void Resume()
     {
         if(AudioTime != 0)
         {
@@ -53,5 +66,5 @@ public class dataPadClass : interactibleObj
         Paused = true;
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
-    }
+    }*/
 }
