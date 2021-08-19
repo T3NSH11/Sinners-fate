@@ -384,6 +384,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 852361470}
+  - component: {fileID: 852361471}
   m_Layer: 0
   m_Name: MonsterContainer
   m_TagString: Untagged
@@ -406,6 +407,47 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &852361471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852361469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afd816d3c227e5d4e83591cddb96c778, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FOV: {fileID: 0}
+  current_SetPath: {fileID: 2040269448}
+  currentPath_NodeID: 0
+  speed: 5
+  waypointDist: 1
+  rotationSpeed: 5
+  path_Name: MonsterPath
+  prevNode_Pos: {x: 0, y: 0, z: 0}
+  patrolPaths: []
+  PlayerDetected: 0
+  PathTargetObj: {fileID: 852361469}
+  Onpath: 0
+  PathTargetPos: {x: 0, y: 0, z: 0}
+  SearchTime: 0
+  PlayerLostLoc: {x: 0, y: 0, z: 0}
+  MonsterSpeed: 5
+  EnemyMask:
+    serializedVersion: 2
+    m_Bits: 256
+  deathui: {fileID: 952469298}
+  player: {fileID: 708819867}
+  enemyAttackRange: 2
+  EnemyCollider: []
+  DistanceToLost: 0
+  teleport: 0
+  PathNodes: []
+  NearestNode: {fileID: 0}
+  LeastDistanceToPlayer: 0
+  monster: {fileID: 1497333327}
 --- !u!1 &952283370
 GameObject:
   m_ObjectHideFlags: 0
@@ -651,42 +693,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6968092270645240772}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1497333329
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1497333327}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afd816d3c227e5d4e83591cddb96c778, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FOV: {fileID: 0}
-  current_SetPath: {fileID: 2040269448}
-  currentPath_NodeID: 0
-  speed: 10
-  waypointDist: 1
-  rotationSpeed: 5
-  path_Name: MonsterPath
-  prevNode_Pos: {x: 0, y: 0, z: 0}
-  patrolPaths: []
-  PlayerDetected: 0
-  PathTargetObj: {fileID: 0}
-  Onpath: 0
-  PathTargetPos: {x: 0, y: 0, z: 0}
-  SearchTime: 0
-  PlayerLostLoc: {x: 0, y: 0, z: 0}
-  MonsterSpeed: 10
-  EnemyMask:
-    serializedVersion: 2
-    m_Bits: 256
-  deathui: {fileID: 952469298}
-  player: {fileID: 708819867}
-  enemyAttackRange: 2
-  EnemyCollider: []
-  DistanceToLost: 0
 --- !u!1 &1608562247
 GameObject:
   m_ObjectHideFlags: 0
