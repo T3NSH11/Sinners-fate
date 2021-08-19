@@ -43,6 +43,14 @@ public class MonsterStateMachine : MonoBehaviour
 
     void Update()
     {
+        if (Vector3.Distance(player.transform.position, PathTargetObj.transform.position) == 2)
+        {
+            Onpath = true;
+        }
+        else
+        {
+            Onpath = false;
+        }
 
         EnemyCollider = Physics.OverlapSphere(PathTargetPos, 1, EnemyMask);
 

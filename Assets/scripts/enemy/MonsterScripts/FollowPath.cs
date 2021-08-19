@@ -12,6 +12,8 @@ public class FollowPath : MonsterState
         var object_Rotation = Quaternion.LookRotation(MonsterState.current_SetPath.pathNodes[MonsterState.currentPath_NodeID].position - MonsterState.transform.position);
         MonsterState.transform.rotation = Quaternion.Slerp(MonsterState.transform.rotation, object_Rotation, Time.deltaTime * MonsterState.rotationSpeed);
 
+        MonsterState.SearchTime = 0;
+
         if (node_Distance <= MonsterState.waypointDist)
         {
             MonsterState.currentPath_NodeID++;
