@@ -8,14 +8,11 @@ public class gameEnd : MonoBehaviour
 {
     public void quitGame()
     {
-        Debug.Log("quiting game");
         Application.Quit();
-
     }
 
     public void loadMain()
     {
-        Debug.Log("level Loading");
         SceneManager.LoadScene("mainMenu");
     }
 

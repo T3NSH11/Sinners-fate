@@ -576,11 +576,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NumberOfpowerCells: 0
+  gameEndUI: {fileID: 0}
   dropText: {fileID: 0}
-  tier1Doors: []
-  tier2Doors: []
-  tier3Doors: []
-  tier4Doors: []
 --- !u!65 &438119430
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -846,11 +843,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NumberOfpowerCells: 0
+  gameEndUI: {fileID: 0}
   dropText: {fileID: 0}
-  tier1Doors: []
-  tier2Doors: []
-  tier3Doors: []
-  tier4Doors: []
 --- !u!1 &1718217612
 GameObject:
   m_ObjectHideFlags: 0
@@ -1446,6 +1440,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6865463112576511603, guid: a0b85b6f827ab31419aa8b40907168b1,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 74.6
       objectReference: {fileID: 0}
     - target: {fileID: 7581511242899493593, guid: a0b85b6f827ab31419aa8b40907168b1,
         type: 3}
