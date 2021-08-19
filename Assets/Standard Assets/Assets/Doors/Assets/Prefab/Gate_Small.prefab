@@ -266,6 +266,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8875449794350432198}
     m_Modifications:
+    - target: {fileID: 1608076987079609870, guid: 59347c4d09c1e2646859e384abecdf58,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 3253480125514819963, guid: 59347c4d09c1e2646859e384abecdf58,
         type: 3}
       propertyPath: m_Color.b
@@ -280,6 +285,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5306370313694812465, guid: 59347c4d09c1e2646859e384abecdf58,
+        type: 3}
+      propertyPath: m_TagString
+      value: DoorLights
       objectReference: {fileID: 0}
     - target: {fileID: 5879684210392247789, guid: 59347c4d09c1e2646859e384abecdf58,
         type: 3}
